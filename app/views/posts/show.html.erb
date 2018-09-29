@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Opis:</strong>
+  <%= @post.description %>
+</p>
+<% if @post.user == current_user %>
+  <%= link_to 'Edycja', edit_post_path(@post) %>
+<% end %>
+<%= link_to 'Wstecz', posts_path %>
